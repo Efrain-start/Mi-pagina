@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- META / OG -->
+  <title>Efrain Aguilar — Desarrollo web, Flyers y Videos Creativos</title>
+  <meta name="description" content="Diseño y construyo sitios web, flyers y videos creativos. Portafolio, servicios, testimonios y contacto por WhatsApp." />
+  <meta property="og:title" content="Efrain Aguilar — Desarrollo web, Flyers y Videos Creativos">
+  <meta property="og:description" content="Webs rápidas y bonitas, flyers para redes y videos creativos para tu negocio.">
+  <meta property="og:image" content="https://efrainaguilar.com/assets/img/efrain-aguilar.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://efrainaguilar.com/">
+  <meta name="theme-color" content="#0A0A0A">
+
+<!-- OG extra -->
+<meta property="og:url" content="https://efrainaguilar.com/">
+<meta property="og:site_name" content="Efrain Aguilar">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- FUENTES / CSS -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Lora:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css?v=2025-09-10" />
+  <link rel="shortcut icon" href="assets/img/5.png" type="image/x-icon">
+</head>
+<body>
+
+  <!-- Botón flotante WhatsApp -->
+<a href="https://wa.me/3314466302?text=Hola%20Efra,%20vi%20tus%20servicios%20(web%2C%20flyers%2C%20videos)%20y%20quiero%20informaci%C3%B3n"
+  class="whatsapp-btn" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+      alt="WhatsApp" width="20" height="20" style="filter: invert(1);" />
+  <span>Contáctame por WhatsApp</span>
+</a>
+
+
+  <!-- Header -->
+  <header class="site-header fade-up">
+    <div class="container header__inner fade-up">
+      <a class="brand fade-up" href="#inicio" aria-label="Ir al inicio">Efrain Aguilar</a>
+
+      <nav class="site-nav fade-up" aria-label="Principal">
+        <button class="nav-toggle fade-up" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">☰</button>
+        <ul id="menu" class="site-nav__list fade-up">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#proyectos">Proyectos realizados</a></li>
+          <li><a href="#proceso">Cómo trabajo</a></li>
+          <li><a href="#testimonios">Testimonios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <!-- Hero -->
+    <section class="hero hero--abstracto fade-up">
+  <canvas id="hero-particles" aria-hidden="true"></canvas>
+
+  <div class="container hero__inner fade-up">
+    <h1 class="hero__title fade-up">
+      Hola, soy <span class="accent fade-up">Efrain&nbsp;Aguilar</span><br/>
+      Programador de páginas web, Flyers y Videos para redes sociales
+    </h1>
+    <p class="hero__subtitle fade-up">
+      Construyo interfaces web limpias y modernas (HTML, CSS, JavaScript),
+      también diseño <strong>flyers</strong> para redes y creo
+      <strong>videos para redes sociales</strong>
+    </p>
+    <div class="hero__cta fade-up">
+      <a class="btn btn--primary fade-up" href="#servicios">Ver servicios</a>
+      <a class="btn btn--ghost fade-up" href="#proyectos">Proyectos realizados</a>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Sobre mí -->
+<section id="sobre-mi" class="about fade-up">
+  <div class="container about__grid fade-up">
+    <figure class="about__photo fade-up">
+      <img src="assets/img/foto-de-efra.png" alt="Efrain Aguilar en traje" loading="lazy">
+    </figure>
+    <div class="about__copy fade-up">
+      <h2 class="section-title fade-up">Sobre mí</h2>
+      <p>
+        Soy <strong>Efrain Aguilar</strong>, desarrollador frontend con experiencia en
+        <strong>HTML, CSS, JavaScript</strong> y herramientas modernas como
+        <strong>SASS, Figma, Git y Bootstrap</strong>.
+      </p>
+      <p>
+        También diseño <strong>flyers</strong> para redes y creo
+        <strong>videos para redes sociales</strong> para campañas y negocios.
+      </p>
+      <p>
+        Mi objetivo es ofrecer soluciones digitales claras, rápidas y atractivas
+        que ayuden a las marcas a conectar con más personas.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Servicios -->
+<section id="servicios" class="services fade-up">
+  <div class="container fade-up">
+    <h2 class="section-title fade-left">Servicios</h2>
+
+    <div class="services__grid stagger">
+      <article class="svc-card zoom-in" style="--i:0">
+        <h3>🖥️ Sitios web</h3>
+        <p class="fade-right">Webs modernas, responsive y listas para compartir en WhatsApp/Redes, con buenas prácticas de SEO y accesibilidad.</p>
+      </article>
+
+      <article class="svc-card zoom-in" style="--i:1">
+        <h3>🎨 Diseño de Flyers</h3>
+        <p class="fade-right">Flyers para Instagram, Facebook y estados de WhatsApp. Formatos cuadrados, verticales y stories.</p>
+      </article>
+
+      <article class="svc-card zoom-in" style="--i:2">
+        <h3>🎬 Videos para redes sociales</h3>
+        <p class="fade-right">Clips cortos para anuncios, reels y contenido dinámico que atrape la atención.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+    <!-- Proyectos realizados -->
+    <section id="proyectos" class="projects fade-up">
+      <div class="container fade-up">
+        <h2 class="section-title fade-left">Proyectos realizados</h2>
+
+        <div class="projects__grid stagger">
+          <article class="card zoom-in" style="--i:0">
+            <img src="assets/img/caras-newsletter.png" alt="Landing de Newsletter CARAS" loading="lazy">
+            <div class="card__body fade-up">
+              <h3>📰 Newsletter CARAS</h3>
+              <p>Landing con validación de formulario de suscripción, responsive y accesible. <br>HTML, CSS, JavaScript</p>
+              <div class="card__links fade-up">
+                <a href="https://efrain-newsletter-caras.netlify.app/" target="_blank" rel="noopener noreferrer" >Ver página</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card zoom-in" style="--i:1">
+            <img src="assets/img/zapatos-ecommerce.png" alt="E-commerce de zapatos de baile" loading="lazy">
+            <div class="card__body fade-up">
+              <h3>👞 Zapatos de Baile — E-commerce</h3>
+              <p>Catálogo con tarjetas de producto, buscador y estilos responsivos. <br>HTML, CSS, JavaScript</p>
+              <div class="card__links fade-up">
+                <a href="https://stepone-ecommerce.netlify.app" target="_blank" rel="noopener noreferrer">Ver página</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card zoom-in" style="--i:2">
+            <img src="assets/img/albert-einstein.png" alt="Página biográfica de Albert Einstein" loading="lazy">
+            <div class="card__body fade-up">
+              <h3>👨‍🔬 Página biográfica — Einstein</h3>
+              <p>Secciones de biografía, cronología y frases. <br>HTML, CSS</p>
+              <div class="card__links fade-up">
+                <a href="https://alberteinstei.netlify.app/" target="_blank" rel="noopener noreferrer">Ver página</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card zoom-in" style="--i:3">
+            <img src="assets/img/spotify-clone.png" alt="Maquetación inspirada en Spotify" loading="lazy">
+            <div class="card__body fade-up">
+              <h3>🎵 Spotify Clone</h3>
+              <p>Práctica de estilos modernos en CSS. <br>HTML, CSS</p>
+              <div class="card__links fade-up">
+                <a href="https://spotifyefra.netlify.app/" target="_blank" rel="noopener noreferrer">Ver página</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card zoom-in" style="--i:4">
+            <img src="assets/img/Logo de cliente 1.png" alt="pagina web de consultoria y seguridad industrial " loading="lazy">
+            <div class="card__body fade-up">
+              <h3>🛡️ ProQuality — Consultoría EHS+Q</h3>
+              <p>Sitio web corporativo para presentar servicios de consultoría, capacitación y venta de equipo <br>HTML, CSS</p>
+              <div class="card__links fade-up">
+                <a href="https://proqualityehs.com/" target="_blank" rel="noopener noreferrer">Ver página</a>
+                <!-- <a href="https://github.com/Efrain-start/spotify.efra/tree/main" target="_blank" rel="noopener">Código</a> -->
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proceso de trabajo -->
+    <section id="proceso" class="process fade-up">
+      <div class="container fade-up">
+        <h2 class="section-title fade-up">Cómo trabajo</h2>
+        <ol class="process__grid fade-up">
+          <li class="step fade-up">
+            <span class="step__num fade-up">1</span>
+            <h3>Reunión inicial y objetivos</h3>
+            <p>Platicamos por WhatsApp para entender tu negocio, público y metas. Definimos entregables y tiempos.</p>
+          </li>
+          <li class="step fade-up">
+            <span class="step__num fade-up">2</span>
+            <h3>Propuesta visual</h3>
+            <p>Te presento bocetos (web/flyer/video) con colores, tipografía y mensajes clave.</p>
+          </li>
+          <li class="step fade-up">
+            <span class="step__num fade-up">3</span>
+            <h3>Producción</h3>
+            <p>Desarrollo web y/o diseño en Figma/Canva + edición en CapCut. Reviso rendimiento y calidad.</p>
+          </li>
+          <li class="step fade-up">
+            <span class="step__num fade-up">4</span>
+            <h3>Entrega y soporte</h3>
+            <p>Entrego archivos listos para redes o publicamos tu web. Ajustes finos incluidos.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section id="testimonios" class="testimonials fade-up">
+      <div class="container fade-up">
+        <h2 class="section-title fade-left">Testimonios</h2>
+
+        <div class="testimonials__grid stagger">
+          <article class="t-card zoom-in" style="--i:0" itemscope itemtype="https://schema.org/Review">
+            <div class="t-card__head fade-up">
+              <img class="t-avatar fade-up" src="assets/img/Logo de cliente 1.png" alt="" width="48" height="48" loading="lazy">
+              <div>
+                <strong itemprop="author">ProQuality EHS+Q</strong>
+                <div class="t-stars fade-up" aria-label="5 de 5">★★★★★</div>
+              </div>
+            </div>
+            <p class="t-text fade-up" itemprop="reviewBody">“Nos diseñó la página web de la empresa y el resultado fue excelente: moderna, clara y funcional. Ahora nuestros clientes pueden conocernos mejor y contactarnos más fácilmente. Muy recomendado.”</p>
+          </article>
+
+          <article class="t-card zoom-in" style="--i:1" itemscope itemtype="https://schema.org/Review">
+            <div class="t-card__head fade-up">
+              <img class="t-avatar fade-up" src="assets/img/WhatsApp Image 2025-09-09 at 21.56.07_458acbd2.jpg" alt="" width="48" height="48" loading="lazy">
+              <div>
+                <strong itemprop="author">Sonia E.</strong>
+                <div class="t-stars fade-up" aria-label="5 de 5">★★★★★</div>
+              </div>
+            </div>
+            <p class="t-text fade-up" itemprop="reviewBody">“Me ha creado varios videos para redes sociales y todos han quedado creativos, dinámicos y con gran calidad. Gracias a ellos hemos tenido más interacción y alcance con el público.”</p>
+          </article>
+
+          <article class="t-card zoom-in" style="--i:2" itemscope itemtype="https://schema.org/Review">
+            <div class="t-card__head fade-up">
+              <img class="t-avatar fade-up" src="assets/img/Dj cumbiambero logo.jpg" alt="" width="48" height="48" loading="lazy">
+              <div>
+                <strong itemprop="author">Luis E.</strong>
+                <div class="t-stars fade-up" aria-label="5 de 5">★★★★★</div>
+              </div>
+            </div>
+            <p class="t-text fade-up" itemprop="reviewBody">“Le pedí varios flyers para diferentes eventos y siempre entrega diseños atractivos y puntuales. Los flyers nos han ayudado a dar una mejor imagen y a captar más atención en redes.”</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contact fade-up">
+      <div class="container fade-up">
+        <h2 class="section-title fade-left">Contacto</h2>
+        <p class="fade--right">¿Tienes un proyecto o una idea? Escríbeme por el formulario o por WhatsApp:</p>
+
+        <form id="contactForm" class="contact__form fade-up" action="sendmail.php" method="post" novalidate>
+          <div class="field fade-up">
+            <label for="cname">Nombre</label>
+            <input id="cname" name="name" type="text" placeholder="Tu nombre" required>
+            <span class="field-error fade-up" id="cnameError" aria-live="polite"></span>
+          </div>
+
+          <div class="field fade-up">
+            <label for="cemail">Correo</label>
+            <input id="cemail" name="email" type="email" placeholder="tucorreo@ejemplo.com" required>
+            <span class="field-error fade-up" id="cemailError" aria-live="polite"></span>
+          </div>
+
+          <div class="field fade-up">
+            <label for="cmsg">Mensaje</label>
+            <textarea id="cmsg" name="message" rows="4" placeholder="Cuéntame brevemente" required></textarea>
+            <span class="field-error fade-up" id="cmsgError" aria-live="polite"></span>
+          </div>
+
+          <button class="btn btn--primary fade-up" type="submit">Enviar</button>
+          <div class="form-message fade-up" id="contactMessage" role="status" aria-live="polite"></div>
+        </form>
+          <div class="footer-social fade-up">
+            <a href="https://www.instagram.com/efracode/?hl=es" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+              <i class="bi bi-instagram fade-up"></i>
+            </a>
+            <a href="https://www.tiktok.com/@efracode" target="_blank" rel="noopener noreferrer" aria-label="TikTok" title="TikTok">
+              <i class="bi bi-tiktok fade-up"></i>
+            </a>
+            <a href="https://github.com/Efrain-start" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+              <i class="bi bi-github fade-up"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/efra-aguilar" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+              <i class="bi bi-linkedin fade-up"></i>
+            </a>
+            <a href="https://www.youtube.com/@EfraCode" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube">
+              <i class="bi bi-youtube fade-up"></i>
+            </a>
+          </div>
+
+
+
+    </section>
+  </main>
+
+  <footer class="site-footer fade-up">
+    <div class="container footer__inner fade-up">
+      <p>© <span id="year"></span> Efrain Aguilar — Web • Flyers • Videos</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js?v=2025-09-10" defer></script>
+</body>
+</html>

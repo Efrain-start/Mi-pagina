@@ -1,0 +1,478 @@
+:root{
+  --bg:#0A0A0A; --bg-2:#111214; --text:#F2F2F2; --muted:#A8ADB3; --accent:#E02018;
+  --container:min(1080px,92vw);
+  --ff:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --ff-serif:"Lora",ui-serif,Georgia,serif;
+  --r-lg:16px; --shadow:0 10px 40px rgba(0,0,0,.25);
+}
+html{scroll-behavior:smooth;} section{scroll-margin-top:80px;}
+*,*::before,*::after{box-sizing:border-box;} html,body{margin:0;padding:0;}
+img{display:block;max-width:100%;} a{color:inherit;text-decoration:none;}
+body{
+  font-family:var(--ff); background: radial-gradient(80% 60% at 20% 0%, rgba(224,32,24,.10), transparent 60%) , var(--bg);
+  color:var(--text); line-height:1.6;
+}
+.container{width:var(--container); margin-inline:auto;}
+
+/* Header */
+.site-header{position:sticky; top:0; z-index:20; backdrop-filter:blur(8px); background:rgba(10,10,10,.6); border-bottom:1px solid #1e1f22;}
+.header__inner{display:flex; align-items:center; justify-content:space-between; padding:1rem 0;}
+.brand{font-weight:800; letter-spacing:.4px; font-size:1.05rem;}
+.site-nav__list{display:flex; gap:1.25rem; list-style:none; margin:0; padding:0;}
+.site-nav a{color:var(--muted);} .site-nav a:hover{color:var(--text);}
+.nav-toggle{display:none;}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.site-nav__list {
+  display: flex;
+  gap: 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Redes en el pie de Contacto */
+.footer-social{
+  margin-top: 1.25rem;
+  display: flex;
+  gap: 1.1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-social i{
+  font-size: 1.7rem;             /* tamaño del icono */
+  line-height: 1;
+  display: inline-block;
+}
+
+
+
+/* Hero */
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 90vh;          /* ocupa casi toda la pantalla */
+  display: flex;
+  align-items: center;       /* centra vertical */
+  justify-content: center;   /* centra horizontal */
+  text-align: center;        /* centra el texto */
+  padding: 2rem 0;
+}
+
+.hero__inner {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero__title{font-family:var(--ff-serif); font-size:clamp(2rem,4.6vw,3.2rem); line-height:1.3; margin:0 0 .6rem;}
+
+.hero__subtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--muted);
+  text-align: center;   /* 👈 centrado */
+  margin: 0 auto 1.5rem;
+  max-width: 60ch;      /* evita que el texto se haga muy ancho */
+}
+
+.hero__cta {
+  display: flex;
+  justify-content: center;
+  gap: .8rem;
+  flex-wrap: wrap ;   /* centra los botones */
+}
+
+.hero--abstracto { 
+  background: linear-gradient(-45deg, #e02018, #0a0a0a, #111214, #1c1c1c);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; } 
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+#hero-particles {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;            /* fondo */
+  pointer-events: none;  /* no molesta al usuario */
+  opacity: .55;          /* transparencia */
+}
+
+@media (max-width: 40rem){
+  .hero__title {
+    line-height: 1.5; /* móvil */
+  }
+}
+
+.accent{color:var(--accent);}
+
+
+/* Buttons */
+.btn{display:inline-flex; align-items:center; justify-content:center; border-radius:999px; padding:.9rem 1.15rem; font-weight:700; border:2px solid transparent; transition:.2s ease;}
+.btn--primary{background:var(--accent); color:#fff;} .btn--primary:hover{filter:brightness(.96) saturate(1.05);}
+.btn--ghost{border-color:var(--accent); color:var(--accent); background:transparent;} .btn--ghost:hover{background:rgba(224,32,24,.12);}
+
+/* Sections */
+.section-title{font-family:var(--ff-serif); font-size:clamp(1.5rem,3vw,2rem); margin:0 0 1rem;}
+
+/* Services */
+.services{padding:4rem 0; background:var(--bg-2);}
+.services__grid{display:grid; gap:1.25rem; grid-template-columns:repeat(3,1fr);}
+.svc-card{border:1px solid #222428; background:#131417; border-radius:14px; padding:1rem;}
+.svc-card h3{margin:.25rem 0 .5rem;}
+.svc-card p{color:var(--muted); margin:0 0 .5rem;}
+.svc-list{margin:0; padding-left:1.1rem; color:var(--muted);}
+
+/* Projects */
+.projects{padding:4rem 0;}
+.projects__grid{display:grid; gap:1.25rem; grid-template-columns:repeat(3,1fr);}
+.card{border:1px solid #222428; background:#131417; border-radius:14px; overflow:hidden; display:flex; flex-direction:column;}
+.card img{aspect-ratio:16/10; object-fit:cover;}
+.card__body{padding:1rem;} .card__body h3{margin:0 0 .25rem;} .card__body p{color:var(--muted); margin:.25rem 0 .75rem;}
+.card__links{display:flex; gap:.75rem;} .card__links a{font-weight:700; font-size:.95rem; color:var(--accent);} .card__links a:hover{text-decoration:underline;}
+
+/* Process */
+.process{padding:4rem 0; background:var(--bg-2);}
+.process__grid{display:grid; gap:1rem; grid-template-columns:repeat(4,1fr); counter-reset:steps;}
+.step{border:1px solid #222428; background:#131417; border-radius:14px; padding:1rem;}
+.step__num{display:inline-grid; place-items:center; width:32px; height:32px; border-radius:999px; background:var(--accent); color:#fff; font-weight:800; margin-bottom:.5rem;}
+
+/* Testimonials */
+.testimonials{padding:4rem 0;}
+.testimonials__grid{display:grid; gap:1.25rem; grid-template-columns:repeat(3,1fr);}
+.t-card{border:1px solid #222428; background:#131417; border-radius:14px; padding:1rem;}
+.t-card__head{display:flex; gap:.75rem; align-items:center; margin-bottom:.5rem;}
+.t-avatar{border-radius:999px; background:#0d0f12;}
+.t-stars{font-size:1rem; letter-spacing:.1em; color:#ffd166;}
+.t-text{color:var(--muted); margin:0;}
+
+/* Contacto */
+.contact{padding:4rem 0;}
+.contact__form{margin-top:.75rem; display:grid; gap:.9rem; max-width:640px;}
+.field label{display:block; font-weight:700; margin-bottom:.25rem;}
+.field input,.field textarea{width:100%; background:#121316; color:var(--text); border:1px solid #24262a; border-radius:10px; padding:.9rem 1rem; outline:none; transition:border-color .2s ease, box-shadow .2s ease;}
+.field input:focus,.field textarea:focus{border-color:var(--accent); box-shadow:0 0 0 4px rgba(224,32,24,.12);}
+.field-error{display:block; margin-top:.25rem; color:#ffb3bd; font-weight:700; font-size:.9rem;}
+.form-message{margin-top:.5rem; padding:.75rem 1rem; border-radius:10px; border:1px solid transparent; font-weight:700;}
+.form-message--success{color:#0E7A3E; background:#E6F4EA; border-color:#B9E5C9;}
+.form-message--error{color:#7A0E1B; background:#FBE9EB; border-color:#F3C5CC;}
+
+/* Footer */
+.site-footer{border-top:1px solid #1f2125; background:#0a0a0a;}
+.footer__inner{padding:1.25rem 0; text-align:center; color:var(--muted);}
+
+/* .footer-social {
+  margin-top: 1rem;
+  font-size: .95rem;
+} */
+
+.footer-social a {
+  color: var(--muted);
+  margin: 0 .5rem;
+  transition: color .2s ease;
+}
+
+.footer-social a:hover {
+  color: var(--accent);
+}
+
+
+/* Botón WhatsApp */
+/* --- Efecto pulse para el botón de WhatsApp --- */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background: #25d366;
+  color: #fff;
+  font-weight: 600;
+  font-size: .9rem;
+  padding: 8px 14px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  text-decoration: none;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity .3s ease, transform .3s ease, background .2s ease;
+}
+
+
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 25px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+
+.whatsapp-btn:hover{ background:#20b358; }
+
+.whatsapp-btn img{
+  width:16px;
+  height:16px;
+}
+
+/* --- VERSIÓN MÓVIL SOLO ÍCONO --- */
+@media (max-width:600px){
+  .whatsapp-btn{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    padding:0;
+    justify-content:center;
+  }
+  .whatsapp-btn img{
+    width:24px;
+    height:24px;
+  }
+  .whatsapp-btn span{ display:none; }
+}
+
+
+/* Estados de error */
+.is-invalid{border-color:#E02018 !important; box-shadow:0 0 0 4px rgba(224,32,24,.12);}
+
+/* Responsive */
+@media (max-width:64rem){
+  .hero__grid{grid-template-columns:1fr;}
+  .hero__photo{justify-self:start;}
+  .projects__grid{grid-template-columns:1fr 1fr;}
+  .services__grid{grid-template-columns:1fr 1fr;}
+  .process__grid{grid-template-columns:1fr 1fr;}
+  .testimonials__grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:40rem){
+  .projects__grid{grid-template-columns:1fr;}
+  .services__grid{grid-template-columns:1fr;}
+  .process__grid{grid-template-columns:1fr;}
+  .testimonials__grid{grid-template-columns:1fr;}
+  .site-nav__list{
+    position:absolute; right:1rem; top:62px; padding:.75rem; background:#121316; border:1px solid #23262a; border-radius:12px;
+    display:none; flex-direction:column;
+  }
+  .nav-toggle{display:inline-block; background:transparent; color:var(--text); border:1px solid #2a2d33; border-radius:10px; padding:.35rem .6rem;}
+  .site-nav__list.is-open{display:flex;}
+}
+
+.about {
+  padding: 4rem 0;
+  background: var(--bg-2);
+}
+
+.about p {
+  max-width: 60ch;
+  margin-bottom: 1rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+
+/* Sobre mí */
+.about {
+  padding: 4rem 0;
+  background: var(--bg-2);
+}
+
+.about__grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1.2fr;
+  align-items: center;
+}
+
+.about__photo img {
+  border-radius: 12px;
+  max-width: 100%;
+  height: auto;
+}
+
+.about__copy p {
+  color: var(--muted);
+  margin-bottom: 1rem;
+  max-width: 55ch;
+  line-height: 1.6;
+}
+
+@media (max-width: 48rem){
+  .about__grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about__photo {
+    justify-self: center;
+    max-width: 260px;
+  }
+}
+
+/* ===== Animaciones de entrada del HERO ===== */
+.hero .hero__title,
+.hero .hero__subtitle,
+.hero .hero__cta{
+  opacity: 0;
+  transform: translateY(14px);
+}
+
+/* Cuando el hero tenga la clase .is-in, disparamos animaciones */
+.hero.is-in .hero__title{
+  animation: fadeUp .7s ease-out forwards;
+  animation-delay: .05s;
+}
+.hero.is-in .hero__subtitle{
+  animation: fadeUp .7s ease-out forwards;
+  animation-delay: .22s;  /* entra después del título */
+}
+.hero.is-in .hero__cta{
+  animation: fadeUp .7s ease-out forwards;
+  animation-delay: .38s;  /* entra al final */
+}
+
+@keyframes fadeUp{
+  from{ opacity: 0; transform: translateY(14px); }
+  to  { opacity: 1; transform: translateY(0); }
+}
+
+/* Si el usuario prefiere menos movimiento, quítalas */
+@media (prefers-reduced-motion: reduce){
+  .hero .hero__title,
+  .hero .hero__subtitle,
+  .hero .hero__cta{
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+}
+
+
+/* ===== Animaciones genéricas ===== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.fade-up.in-view {
+  animation: fadeUp .7s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Animación de entrada para el botón WhatsApp */
+/* .whatsapp-btn{
+  opacity:0;
+  transform: translateY(12px);
+  transition: opacity .3s ease, transform .3s ease, background .2s ease;
+} */
+
+.whatsapp-btn.show{
+  opacity:1;
+  pointer-events: auto;
+  transform: translateY(0);
+  animation: fadeUpBtn .6s ease-out both, pulse 2.4s .6s infinite;
+}
+
+@keyframes fadeUpBtn{
+  from{ opacity:0; transform: translateY(12px); }
+  to  { opacity:1; transform: translateY(0); }
+}
+
+
+
+
+
+/* ===== Variantes de entrada ===== */
+.fade-left, .fade-right, .zoom-in {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.fade-left   { transform: translateX(-24px); }
+.fade-right  { transform: translateX(24px); }
+.zoom-in     { transform: scale(.96); }
+
+.fade-left.in-view  { animation: fadeLeft  .7s ease-out forwards; }
+.fade-right.in-view { animation: fadeRight .7s ease-out forwards; }
+.zoom-in.in-view    { animation: zoomIn    .6s ease-out forwards; }
+
+@keyframes fadeLeft  { from{opacity:0; transform:translateX(-24px);} to{opacity:1; transform:translateX(0);} }
+@keyframes fadeRight { from{opacity:0; transform:translateX(24px);}  to{opacity:1; transform:translateX(0);} }
+@keyframes zoomIn    { from{opacity:0; transform:scale(.96);}        to{opacity:1; transform:scale(1);} }
+
+/* ===== Hover “lift” para tarjetas ===== */
+.card {
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 34px rgba(0,0,0,.35);
+  border-color: #2a2d33;
+}
+
+/* ===== Hover suave en botones ===== */
+.btn--primary {
+  box-shadow: 0 6px 18px rgba(224,32,24,.28);
+  transition: transform .15s ease, box-shadow .2s ease, filter .2s ease;
+}
+.btn--primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(224,32,24,.34);
+}
+.btn--ghost:hover {
+  transform: translateY(-1px);
+}
+
+/* ===== Pulse opcional (útil para CTA/WhatsApp) ===== */
+.pulse {
+  animation: softPulse 2.2s ease-in-out infinite;
+  transform-origin: center;
+}
+@keyframes softPulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.04); }
+}
+
+/* ===== Stagger (retraso escalonado) ===== */
+/* Añade la clase .stagger al contenedor y usa --i en cada hijo */
+.stagger > * {
+  /* si el hijo tiene .in-view y una animación, aplica retraso */
+  animation-delay: calc(var(--i, 1) * 90ms) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
